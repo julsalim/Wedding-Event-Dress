@@ -35,7 +35,6 @@ socket.on('start', (data) => {
 });
 
 socket.on('turn', (data) => {
-    // Code to handle when it's a player's turn.
     turn = data.turn;
 
     $.ajax({
