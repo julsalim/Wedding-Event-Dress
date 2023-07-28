@@ -37,18 +37,6 @@ socket.on('start', (data) => {
 socket.on('turn', (data) => {
     turn = data.turn;
 
-    $.ajax({
-        url: '/check-married',
-        type: 'GET',
-        success: function (response) {
-            console.log(response);
-            if (response == 1) {
-                
-                window.location.href = '/';
-            }
-        }
-    });
-
     if(data.users.length === 1){
         document.getElementById('message').innerHTML = 'Waiting for another player to join...';
         document.getElementById('board').classList.add('hidden');

@@ -15,7 +15,7 @@ const io = new Server(server, {
 
 const PORT = process.env.PORT || 3000;
 
-let rooms = {}; // Object to store rooms and their information
+let rooms = {};
 
 io.on('connection', (socket) => {
     socket.on('joinRoom', (roomId) => {
